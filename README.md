@@ -37,6 +37,7 @@ The project comes with an example.ini file that you can use to fill with your ow
 * **General.ScreenName**: your twitter account screen name.
 * **General.BatchSize**: the maximum number of friend acconts you wish to be able to remove on each run.
 ```
+NO QUOTES
 
 ## Run program
 ```
