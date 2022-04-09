@@ -11,7 +11,7 @@ def main():
 
     #Pass tokens for authorization
     auth = tweepy.OAuthHandler(config['API']['Key'], config['API']['Secret'])
-    auth.set_access_token(config['Acess']['Token'], config['Acess']['Secret'])
+    auth.set_access_token(config['Access']['Token'], config['Access']['Secret'])
 
     #Create API object
     api = tweepy.API(auth, wait_on_rate_limit=True)
@@ -22,39 +22,27 @@ def main():
     print(user.screen_name)
     print(config['General']['ScreenName'] + ' has ' + str(user.followers_count) + ' friends')
 
-    #List to put the inactive friends in
-    inactive_friends = [];
+    #List to put the friends in
+    friends_to_unfollow = [];
 
     for friend in tweepy.Cursor(api.get_friends, screen_name=user.screen_name).items(): 
-        print('friend: ' + friend.screen_name)
-        tweets_list= api.user_timeline(screen_name = friend.screen_name, count = 1)
-        tweet= tweets_list[0] # last status of this friend (tweepy.models.Status)
-
-        print('Last tweet:')
-        print(tweet.created_at) #datetime object for the tweet
-        print()
-
-        delta = date.today() - tweet.created_at.date()
-        #If the last status is older than the threshold on the .ini file,
-        #the friend's name is added to the inactive friends list.
-        if (delta.days > int(config['General']['DaysInactive'])):
-            inactive_friends.append(friend)
+        friends_to_unfollow.append(friend)
         
-        if (len(inactive_friends) >= int(config['General']['BatchSize'])):
+        if (len(friends_to_unfollow) >= int(config['General']['BatchSize'])):
             break
 
     #output the result
-    if (len(inactive_friends) > 0):
-        print('The following % s friends are inactive for more than 5 days:' % len(inactive_friends))
-        for friend in inactive_friends:
+    if (len(friends_to_unfollow) > 0):
+        print('The following % s friends will be unfollowed:' % len(friends_to_unfollow))
+        for friend in friends_to_unfollow:
             print(friend.screen_name)
 
-        print('Unfollowing %s inactive users..' % len(inactive_friends))
+        print('Unfollowing %s friends..' % len(friends_to_unfollow))
 
         #To unfollow wothout prompt, comment the following 2 lines
         answer = input("Are you sure? [Y/n]").lower()
         if answer and answer[0] == "y":
-            for friend in inactive_friends:
+            for friend in friends_to_unfollow:
                 print("Unfollowing " + friend.screen_name)
                 friend.unfollow()
 
