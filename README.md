@@ -1,7 +1,8 @@
 # Twitter Unfollow All Friends
 
 ## Twitter API keys
-Before calling the twitter API, you must have the Twitter Developer account and a set of keys and tokens. Read more about it on the [official portal](https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api).
+Before calling the twitter API, you must have the Twitter Developer account and a set of keys and tokens. 
+https://developer.twitter.com/en/portal/dashboard
 This should only take 5 minutes or so
 
 Please note, when creating the Twitter app on the developer portal, you must define it as read/write, otherwise the unfollow command will fail with an error. 
