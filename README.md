@@ -6,9 +6,9 @@ https://developer.twitter.com/en/portal/dashboard
 This should only take 5 minutes or so
 
 In developer portal, select your project. User authentication settings -> edit
--> OAuth 1.0a, choose read-write
-callback url: http://localhost:3000
-website url: just filled in smth random (e.g. my facebook page yikes ..)
+-> OAuth 1.0a, choose read-write.
+Callback url: http://localhost:3000 , 
+Website url: just filled in smth random (e.g. my facebook page yikes ..)
 
 Under keys and tokens:
 take note of 
@@ -23,7 +23,6 @@ The project comes with an config.ini file that you can use to fill with your own
 ```
 ### Configuration parameters
 * **API.Key and API.Secret**
-* **Bearer.Token**: OAuth 2.0 Bearer Token authenticates requests on behalf of your developer App.
 * **Access.Token and Access.Secret
 * **General.ScreenName**: your twitter account screen name, e.g. @xyz
 * **General.BatchSize**: the maximum number of friend accounts you wish to be able to remove on each run. Probably best to not delete all at once. It might be that twitter limits the number of friends you can unfollow during a certain time, not sure about that.
