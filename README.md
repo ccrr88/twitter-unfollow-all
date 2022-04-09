@@ -5,6 +5,10 @@ Before calling the twitter API, you must have the Twitter Developer account and 
 https://developer.twitter.com/en/portal/dashboard
 This should only take 5 minutes or so
 
+select your project settings -> authentication -> OAuth 1.0a, choose read-write
+callback url: http://localhost:3000
+website url: just filled in smth random
+
 When you want to unfollow friends, you need to upgrade the essential access to elevated access. You need to do it in the dashboard: https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api . You need to motivate why you need additional access. This process goes very quickly. As motivation I said the following: " I am currently writing a program in python for unfollowing friends
 When I try to do this I get the following message:
 tweepy.errors.Forbidden: 403 Forbidden
