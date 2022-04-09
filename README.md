@@ -6,7 +6,7 @@ https://developer.twitter.com/en/portal/dashboard
 This should only take 5 minutes or so
 
 In developer portal, select your project. User authentication settings -> edit
--> OAuth 1.0a, choose read-write.
+-> OAuth 1.0a, choose read-write. 
 Callback url: http://localhost:3000 , 
 Website url: just filled in smth random (e.g. my facebook page yikes ..)
 
