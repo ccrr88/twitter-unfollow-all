@@ -1,5 +1,7 @@
 # Twitter Unfollow All Friends
 
+(forked from ozzie-eu and adapted to unfollow all friends. Debugged and tested on macbook)
+
 ## Twitter API keys
 Before calling the twitter API, you must have a Twitter Developer account and a set of keys and tokens. 
 https://developer.twitter.com/en/portal/dashboard
