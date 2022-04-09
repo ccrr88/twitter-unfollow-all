@@ -5,7 +5,7 @@ from datetime import date
 def main():
     #Read security tokens from external .ini file
     config = configparser.ConfigParser()
-    config.read('..\..\TwitterAPI\config.ini')
+    config.read('config.ini')
     print('Read configuration file.')
     print(config.sections())
 
