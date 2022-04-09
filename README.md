@@ -27,10 +27,10 @@ The project comes with a config.ini file that you can use to fill with your own 
 
 ```
 ### Configuration parameters
-* **API.Key and API.Secret**
-* **Access.Token and Access.Secret
-* **General.ScreenName**: your twitter account screen name, e.g. @xyz
-* **General.BatchSize**: the maximum number of friend accounts you wish to be able to remove on each run. 
+* API.Key and API.Secret
+* Access.Token and Access.Secret
+* General.ScreenName: your twitter account screen name, e.g. @xyz
+* General.BatchSize: the maximum number of friend accounts you wish to be able to remove on each run. 
 ```
 
 (Regarding BatchSize: Probably best to not delete all friends you are following at once. It might be that twitter limits the number of friends you can unfollow during a certain time, not sure about that.)
