@@ -25,8 +25,12 @@ The project comes with an example.ini file that you can use to fill with your ow
 * **Access.Token and Access.Secret**: user-specific credentials used to authenticate OAuth 1.0a API requests.
 * **General.ScreenName**: your twitter account screen name.
 * **General.BatchSize**: the maximum number of friend acconts you wish to be able to remove on each run.
+```
 
 ## Run program
+```
 python 
+```
+
 
 
