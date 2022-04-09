@@ -22,6 +22,7 @@ take note of
 
 ## Script Configuration
 The project comes with a config.ini file that you can use to fill with your own Twitter API credentials.
+
 !! Use no quotes around the parameters
 
 ```
@@ -41,10 +42,6 @@ Obviously you need Python to run this: https://www.python.org/downloads/
 put all files (config.ini, requirements.txt, program.py) in the same folder 
 
 ## Install required packages
-The script works with the following python packages:
-* Tweepy
-* configmanager
-
 The required dependencies are on the **requirements.txt** file. To install them run the following in the command line (in the folder where you put all the files):
 ```
 python3 -m pip install --user -r requirements.txt
