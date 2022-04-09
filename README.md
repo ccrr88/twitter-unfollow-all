@@ -1,16 +1,17 @@
 # Twitter Unfollow All Friends
 
-(forked from ozzie-eu and adapted to unfollow all friends. Debugged and tested on macbook)
+(forked from ozzie-eu and adapted to unfollow all friends. Debugged and tested for a test account)
 
 ## Twitter API keys
-Before calling the twitter API, you must have a Twitter Developer account and a set of keys and tokens. 
-https://developer.twitter.com/en/portal/dashboard
-This should only take 5 minutes or so
+Before calling the twitter API, you must have a Twitter Developer account and a set of keys and tokens. All this should only take 10 minutes or so.
 
+Make a developer account here: https://developer.twitter.com/en/portal/dashboard
+
+After you have your developer account, do the following:
 In developer portal, select your project. User authentication settings -> edit
 -> OAuth 1.0a, choose read-write. 
 
-Callback url: http://localhost:3000 , Website url: just filled in smth random (e.g. my facebook page yikes ..)
+Fill in the following: Callback url: http://localhost:3000 , Website url: just filled in smth random (e.g. my facebook page yikes ..)
 
 Under keys and tokens:
 take note of 
@@ -20,7 +21,7 @@ take note of
 -> fill these in into config.ini (without quotes !!)
 
 ## Script Configuration
-The project comes with an config.ini file that you can use to fill with your own Twitter API credentials.
+The project comes with a config.ini file that you can use to fill with your own Twitter API credentials.
 !! Use no quotes around the parameters
 
 ```
