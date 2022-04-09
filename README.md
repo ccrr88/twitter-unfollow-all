@@ -29,7 +29,7 @@ The project comes with an example.ini file that you can use to fill with your ow
 
 ## Run program
 ```
-python 
+python program.py
 ```
 
 
