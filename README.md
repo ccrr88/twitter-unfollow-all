@@ -1,6 +1,6 @@
 # Twitter Unfollow All Friends
 
-(forked from ozzie-eu and adapted to unfollow all friends. Debugged and tested for a test account)
+(forked from ozzie-eu and adapted to unfollow all friends (except those specified in doNotUnfollow.csv). Debugged and tested for a test account)
 
 ## Twitter API keys
 Before calling the twitter API, you must have a Twitter Developer account and a set of keys and tokens. All this should only take 10 minutes or so.
@@ -29,17 +29,20 @@ The project comes with a config.ini file that you can use to fill with your own 
 ### Configuration parameters
 * API.Key and API.Secret
 * Access.Token and Access.Secret
-* General.ScreenName: your twitter account screen name, e.g. @xyz
+* General.ScreenName: your twitter account screen name without the @, e.g. xyz
 * General.BatchSize: the maximum number of friend accounts you wish to be able to remove on each run. 
 ```
 
 (Regarding BatchSize: Probably best to not delete all friends you are following at once. It might be that twitter limits the number of friends you can unfollow during a certain time, not sure about that.)
 
+## Exceptions: accounts that you don't want to unfollow
+In the csv file doNotUnfollow.csv you can list the accounts that you don't want to unfollow (screen name without the @)
+
 ## Python
 Obviously you need Python to run this: https://www.python.org/downloads/
 
 ## Files
-put all files (config.ini, requirements.txt, program.py) in the same folder 
+put all files (config.ini, requirements.txt, program.py, doNotUnfollow.csv) in the same folder 
 
 ## Install required packages
 The required dependencies are on the **requirements.txt** file. To install them run the following in the command line (in the folder where you put all the files):
