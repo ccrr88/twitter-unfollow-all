@@ -1,6 +1,7 @@
 import configparser
 import tweepy
 from datetime import date
+import csv
 
 def main():
 
@@ -23,11 +24,20 @@ def main():
     print(user.screen_name)
     print(config['General']['ScreenName'] + ' has ' + str(user.friends_count) + ' friends')
 
+    with open('doNotUnfollow.csv', 'r') as read_obj:
+        csv_reader = csv.reader(read_obj)
+        list_long = list(csv_reader)
+
+    do_not_unfollow = []
+    for lst in list_long:
+        do_not_unfollow.extend(lst)
+
     #List to put the friends in
     friends_to_unfollow = [];
 
     for friend in tweepy.Cursor(api.get_friends, screen_name=user.screen_name).items(): 
-        friends_to_unfollow.append(friend)
+        if(friend.screen_name not in do_not_unfollow):
+            friends_to_unfollow.append(friend)
         
         if (len(friends_to_unfollow) >= int(config['General']['BatchSize'])):
             break
